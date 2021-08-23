@@ -22,7 +22,7 @@ func main() {
 
 	command, ok := commands[commandTitle]
 	if !ok {
-		log.Fatal(err)
+		log.Fatalf("Couldn't find command with %q title", commandTitle)
 	}
 
 	err = execCommand(command)
